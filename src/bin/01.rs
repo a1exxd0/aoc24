@@ -38,7 +38,7 @@ pub fn part_two(input: &str) -> Option<u32> {
     let occurences: HashMap<u32, u32> = vec2
         .iter()
         .fold(HashMap::new(), |mut acc, &n| {
-            *acc.entry(n).or_insert(0) += 1;
+            *acc.entry(n).or_default() += 1;
             acc
         });
 
