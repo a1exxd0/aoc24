@@ -24,7 +24,7 @@ pub fn part_one(input: &str) -> Option<u32> {
     vec1.sort(); vec2.sort();
 
     Some (
-        vec1.iter().zip(vec2.iter()).map(|(a, b)| (a - b)).sum()
+        vec1.iter().zip(vec2.iter()).map(|(a, b)| (*a as i32 - *b as i32)).sum::<i32>() as u32
     )
 }
 
